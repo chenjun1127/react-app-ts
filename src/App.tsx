@@ -1,25 +1,25 @@
-import React from 'react';
-import logo from './logo.svg';
+import { Link, Route, Routes } from 'react-router-dom';
 import './App.css';
 import Counter from './components/counter';
-import { Routes, Route, Link } from 'react-router-dom'
 import GetManager from './components/get_manager';
+import Hooks from './views/Hooks';
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />      
-        <div className="column column1">
+        <div className="column column1 app-title">
           <span>
-          <Link to="/">Index</Link> |{' '}
-            <Link to="/counter">Counter</Link> |{' '}
+            <Link to="/">Index</Link> 
+            <Link to="/counter">Counter</Link> 
             <Link to="/getApi">Get Data</Link>
+            <Link to="/hooks">React Hooks</Link>
           </span>
         </div>
-        <Routes> 
-          <Route path="/" element />
+        <Routes>
+          <Route path="/*" element={<Hooks />} />
           <Route path="/counter" element={<Counter value={0} />} />
           <Route path="/getApi" element={<GetManager />} />
+          <Route path="/hooks/*" element={<Hooks />} />
         </Routes>
       </header>
     </div>
