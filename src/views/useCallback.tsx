@@ -13,14 +13,16 @@ const UseCallbackPage = () => {
   const addTodo = useCallback(() => {
     setTodos((t: any) => [...t, "New Todo"]);
   }, [])
-  return <div>
-    <div>---useCallback---</div>
-    <Child todos={todos} addTodo={addTodo} />
-    <div className="counter-container">
-      <p>Count: {count}</p>
-      <button onClick={increment}>+</button>
+  return (
+    <div>
+      <div>---useCallback---</div>
+      <Child todos={todos} addTodo={addTodo} />
+      <div className="counter-container">
+        <p>Count: {count}</p>
+        <button onClick={increment}>+</button>
+      </div>
     </div>
-  </div>
+  )
 }
 // react hooks typescirpt父子组件传值类型写法
 interface IChildProps {

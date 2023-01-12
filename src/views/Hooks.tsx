@@ -1,11 +1,14 @@
 import { Link, Route, Routes } from "react-router-dom";
 import UseCallbackPage from "./useCallback";
 import UseContextPage from "./useContext";
+import UseDeferredValuePage from "./useDeferredValue";
 import UseEffectPage from "./useEffect";
 import UseMemoPage from "./useMemo";
 import UseReducerPage from "./useReducer";
 import UseRefPage from "./useRef";
 import UseStatePage from "./useState";
+import UseSyncExternalStorePage from "./useSyncExternalStore";
+import UseTransitionPage from "./useTransition";
 
 export default function Hooks() {
   return (<div className="react-hooks">
@@ -19,6 +22,9 @@ export default function Hooks() {
           <Link to="/useCallback">useCallback</Link>
           <Link to="/useRef">useRef</Link>
           <Link to="/useContext">useContext</Link>
+          <Link to="/useSyncExternalStore">useSyncExternalStore</Link>
+          <Link to="/useTransition">useTransition</Link>
+          <Link to="/useDeferredValue">useDeferredValue</Link>
         </span>
       </div>
       <Routes> 
@@ -29,6 +35,9 @@ export default function Hooks() {
         <Route path="/useCallback" element={<UseCallbackPage />} />
         <Route path="/useRef" element={<UseRefPage />} />
         <Route path="/useContext" element={<UseContextPage />} />
+        <Route path="/useSyncExternalStore" element={<UseSyncExternalStorePage />} />
+        <Route path="/useTransition" element={<UseTransitionPage />} />
+        <Route path="/useDeferredValue" element={<UseDeferredValuePage />} />
       </Routes>
     </header>
   </div>

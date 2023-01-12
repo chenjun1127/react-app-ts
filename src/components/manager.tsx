@@ -2,7 +2,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { RootState } from "../store";
 import { actions, getMovieData } from "../store/slices/movieSlice";
 
-const GetManager = () => {
+const Manager = () => {
   const { list, totals } = useSelector((state: RootState) => state.movie)
   const dispatch = useDispatch();
   console.log('actions:' + actions.loadDataEnd);
@@ -16,4 +16,4 @@ const GetManager = () => {
     </ul>
   </div>
 }
-export default GetManager;
+export default Manager;

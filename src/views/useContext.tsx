@@ -15,10 +15,12 @@ const UseContextPage: React.FC = () => {
     last: 'Chen'
   })
 
-  return <UserContext.Provider value={user} >
-    <ConsumerComponent></ConsumerComponent>
-    <button onClick={() => setUser({ first: 'Josie', last: 'Wales' })}>change context</button>
-  </UserContext.Provider >
+  return (
+    <UserContext.Provider value={user} >
+      <ConsumerComponent></ConsumerComponent>
+      <button onClick={() => setUser({ first: 'Josie', last: 'Wales' })}>change context</button>
+    </UserContext.Provider >
+  )
 }
 export default UseContextPage;
 

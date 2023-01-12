@@ -10,7 +10,10 @@ const UseStatePage = () => {
     setValue2(20)
   };
   return (
-    <><div>UseStatePage</div><div>{`${value}-----${value2}`}</div><button onClick={handleClick}>改变value2</button></>
+    <>
+      <div>UseStatePage</div><div>{`${value}-----${value2}`}</div>
+      <button onClick={handleClick}>改变value2</button>
+    </>
   )
 }
 
